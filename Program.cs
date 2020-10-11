@@ -4,29 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lessons_1
+namespace ConsoleApp9
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
+        { 
+        class Book
         {
-            Address address = new Address();
+            Title title;
+            Author author;
+            Content content;
 
-            address.Country = "Ukraine";
-            address.City = "Kiev";
-            address.Street = "Khreshchatyk Street";
-            address.House = "15-б";
-            address.Apartament = "68";
-            address.Index = "04495";
-
-            Console.WriteLine(address.Country);
-            Console.WriteLine(address.City);
-            Console.WriteLine(address.Street);
-            Console.WriteLine(address.House);
-            Console.WriteLine(address.Apartament);
-            Console.WriteLine(address.Index);
-
-            Console.ReadKey();
+            public Book(Title title, Author author, Content content)
+            {
+                this.title = title;
+                this.author = author;
+                this.content = content;
+            }
+            public void Show()
+            {
+                title.Show();
+                author.Show();
+                content.Show();
+            }
         }
+    }
     }
 }
